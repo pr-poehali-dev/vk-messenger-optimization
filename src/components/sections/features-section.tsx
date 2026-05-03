@@ -1,55 +1,54 @@
-import { Code, Layers, Palette, Sparkles, Zap, Shield } from "lucide-react"
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { GlowingTiltCard } from "@/components/ui/glowing-tilt-card"
 import { ParallaxScroll } from "@/components/ui/parallax-scroll"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedBackground } from "@/components/ui/animated-background"
 import { ProgressCard } from "@/components/ui-library/cards/progress-card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Icon from "@/components/ui/icon"
 
 export function FeaturesSection() {
   const features = [
     {
-      icon: <Layers className="h-10 w-10 text-red-500" />,
-      title: "Модульные компоненты",
-      description: "Собирайте сложные интерфейсы из переиспользуемых компонентов.",
+      icon: <Icon name="Shield" className="h-10 w-10 text-red-500" />,
+      title: "AES-256 шифрование",
+      description: "Военный уровень защиты данных. Ваш трафик полностью зашифрован и недоступен третьим лицам.",
       progress: 100,
       borderClass: "border-glow-red",
     },
     {
-      icon: <Palette className="h-10 w-10 text-blue-500" />,
-      title: "Гибкие темы",
-      description: "Легко настраивайте цвета, шрифты и стили под ваш бренд.",
-      progress: 90,
+      icon: <Icon name="EyeOff" className="h-10 w-10 text-blue-500" />,
+      title: "Нет логов",
+      description: "Строгая политика No-Log. Мы не храним историю ваших действий в сети.",
+      progress: 100,
       borderClass: "border-glow-blue",
     },
     {
-      icon: <Zap className="h-10 w-10 text-yellow-500" />,
+      icon: <Icon name="Zap" className="h-10 w-10 text-yellow-500" />,
       title: "Высокая скорость",
-      description: "Легковесные компоненты для быстрой загрузки и работы.",
+      description: "Серверы на 1 Гбит/с без ограничений трафика. Стриминг 4K и торренты без лагов.",
       progress: 95,
       borderClass: "border-glow-yellow",
     },
     {
-      icon: <Code className="h-10 w-10 text-green-500" />,
-      title: "TypeScript из коробки",
-      description: "Полная типизация для лучшего DX и меньше багов.",
-      progress: 100,
+      icon: <Icon name="Globe" className="h-10 w-10 text-green-500" />,
+      title: "50+ стран",
+      description: "Более 100 серверов в 50+ странах. Всегда найдётся быстрый сервер рядом с вами.",
+      progress: 90,
       borderClass: "border-glow-green",
     },
     {
-      icon: <Sparkles className="h-10 w-10 text-purple-500" />,
-      title: "Анимации",
-      description: "Красивые анимации и переходы на базе Framer Motion.",
-      progress: 85,
+      icon: <Icon name="Smartphone" className="h-10 w-10 text-purple-500" />,
+      title: "Все устройства",
+      description: "Windows, macOS, iOS, Android, Linux. Одна подписка для 5 устройств одновременно.",
+      progress: 100,
       borderClass: "border-glow-purple",
     },
     {
-      icon: <Shield className="h-10 w-10 text-orange-500" />,
-      title: "Доступность",
-      description: "Компоненты соответствуют стандартам WCAG для всех пользователей.",
-      progress: 92,
+      icon: <Icon name="Lock" className="h-10 w-10 text-orange-500" />,
+      title: "Kill Switch",
+      description: "Аварийное отключение от сети при обрыве VPN. Ваш IP никогда не раскроется случайно.",
+      progress: 100,
       borderClass: "border-glow-orange",
     },
   ]
@@ -63,13 +62,13 @@ export function FeaturesSection() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <AnimatedText
-                text="Возможности для современной веб-разработки"
+                text="Всё для вашей безопасности в сети"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Наша библиотека содержит все необходимое для создания красивых, интерактивных и доступных веб-приложений."
+                text="Наш VPN использует передовые технологии защиты, чтобы вы были в безопасности в любой точке мира."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -84,32 +83,14 @@ export function FeaturesSection() {
             {features.map((feature, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <GlowingTiltCard>
-                  <Card
-                    className={`h-full glassmorphic-card border-none overflow-hidden group soft-glow ${feature.borderClass}`}
-                  >
+                  <Card className={`h-full glassmorphic-card ${feature.borderClass}`}>
                     <CardHeader>
-                      <div className="p-2 rounded-xl w-fit bg-muted/50 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        {feature.icon}
-                      </div>
-                      <CardTitle className="mt-4 tracking-tight relative">
-                        {feature.title}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                      </CardTitle>
+                      <div className="mb-2">{feature.icon}</div>
+                      <CardTitle className="tracking-tight">{feature.title}</CardTitle>
+                      <CardDescription className="opacity-70">{feature.description}</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-4">
-                      <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100">
-                        {feature.description}
-                      </CardDescription>
-
-                      <ProgressCard
-                        title=""
-                        progress={feature.progress}
-                        total={100}
-                        status={feature.progress === 100 ? "success" : "default"}
-                        showPercentage
-                        variant="minimal"
-                        progressColor={feature.progress === 100 ? "bg-green-500" : "bg-red-500"}
-                      />
+                    <CardContent>
+                      <ProgressCard value={feature.progress} label="Надёжность" />
                     </CardContent>
                   </Card>
                 </GlowingTiltCard>

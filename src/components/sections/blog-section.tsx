@@ -5,21 +5,21 @@ import { ArrowRight } from "lucide-react"
 export function BlogSection() {
   const blogPosts = [
     {
-      title: "Создание современных UI с PixelForge",
-      description: "Узнайте, как создавать красивые интерфейсы с нашей библиотекой компонентов.",
-      date: "15 мая 2023",
+      title: "Как VPN защищает вас в публичном Wi-Fi",
+      description: "Почему подключение в кафе, аэропорту или отеле опасно — и как зашифровать трафик за 30 секунд.",
+      date: "20 апреля 2026",
       readTime: "5 мин",
     },
     {
-      title: "Мощь Tailwind CSS и React",
-      description: "Как Tailwind CSS и React могут преобразить ваш рабочий процесс разработки.",
-      date: "28 апреля 2023",
-      readTime: "7 мин",
+      title: "VPN и стриминг: смотрите Netflix из любой страны",
+      description: "Пошаговая инструкция по разблокировке зарубежных библиотек Netflix, Hulu и Disney+.",
+      date: "5 апреля 2026",
+      readTime: "4 мин",
     },
     {
-      title: "Доступные компоненты",
-      description: "Лучшие практики создания UI-компонентов, доступных для всех пользователей.",
-      date: "10 апреля 2023",
+      title: "Что такое Kill Switch и почему он важен",
+      description: "Разбираем, как аварийное отключение защищает ваш IP при нестабильном VPN-соединении.",
+      date: "18 марта 2026",
       readTime: "6 мин",
     },
   ]
@@ -30,9 +30,9 @@ export function BlogSection() {
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Статьи</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Статьи о безопасности</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70">
-                Будьте в курсе наших новостей, туториалов и лучших практик.
+                Советы по защите данных, инструкции и новости из мира кибербезопасности.
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ export function BlogSection() {
                 <CardHeader>
                   <CardTitle className="tracking-tight">{post.title}</CardTitle>
                   <CardDescription className="opacity-70">
-                    {post.date} - {post.readTime}
+                    {post.date} · {post.readTime}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

@@ -7,7 +7,6 @@ import { MagneticButton } from "@/components/ui/magnetic-button"
 import { AnimatedBackground } from "@/components/ui/animated-background"
 import { GradientButton } from "@/components/ui-library/buttons/gradient-button"
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -43,15 +42,13 @@ export function HeroSection() {
               animate="visible"
             >
               <motion.div className="space-y-4" variants={itemVariants}>
-                {/* Modern Hero Header with Gradient */}
                 <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
-                  <span className="gradient-text">UI-компоненты</span>
+                  <span className="gradient-text">Свобода и защита</span>
                   <br />
-                  <span className="text-foreground">для веб-разработчиков</span>
+                  <span className="text-foreground">в интернете</span>
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 opacity-70">
-                  Премиум-библиотека компонентов на shadcn/ui и Aceternity UI для современных веб-приложений.
-                  Создана для разработчиков и дизайнеров в сфере AI-софта.
+                  Безопасный VPN-сервис с военным шифрованием. Скрывайте свой IP, обходите блокировки и защищайте личные данные в любой точке мира.
                 </p>
               </motion.div>
 
@@ -63,8 +60,8 @@ export function HeroSection() {
                   gradientTo="to-red-700"
                   asChild
                 >
-                  <a href="#components" className="flex items-center">
-                    Начать
+                  <a href="#pricing" className="flex items-center">
+                    Попробовать бесплатно
                     <motion.span
                       className="ml-2 inline-block"
                       animate={{ x: [0, 4, 0] }}
@@ -77,7 +74,7 @@ export function HeroSection() {
 
                 <MagneticButton className="neumorphic-button">
                   <a href="#features" className="px-6 py-2.5 block">
-                    Возможности
+                    Как это работает
                   </a>
                 </MagneticButton>
               </motion.div>
@@ -85,7 +82,7 @@ export function HeroSection() {
               <motion.div variants={itemVariants} className="pt-4">
                 <p className="text-sm text-muted-foreground flex items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-                  Более 2 000 разработчиков по всему миру
+                  Более 500 000 пользователей по всему миру
                 </p>
               </motion.div>
             </motion.div>
@@ -103,25 +100,27 @@ export function HeroSection() {
                     className="col-span-2 h-24 rounded-xl bg-red-800/20 border border-red-800/30 flex items-center justify-center glassmorphic-inner-card"
                     whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
                   >
-                    <span className="font-heading text-xl text-white tracking-tight">Премиум-компоненты</span>
+                    <span className="font-heading text-xl text-white tracking-tight">🔒 Соединение защищено</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
-                    className="h-32 rounded-xl bg-gray-800/20 border border-gray-800/30 flex items-center justify-center glassmorphic-inner-card"
+                    className="h-32 rounded-xl bg-gray-800/20 border border-gray-800/30 flex flex-col items-center justify-center gap-2 glassmorphic-inner-card"
                     whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(75, 85, 99, 0.3)" }}
                   >
-                    <span className="font-heading text-white tracking-tight">Tailwind</span>
+                    <span className="text-2xl">🌍</span>
+                    <span className="font-heading text-white tracking-tight text-sm">50+ стран</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.0 }}
-                    className="h-32 rounded-xl bg-red-900/20 border border-red-900/30 flex items-center justify-center glassmorphic-inner-card"
+                    className="h-32 rounded-xl bg-red-900/20 border border-red-900/30 flex flex-col items-center justify-center gap-2 glassmorphic-inner-card"
                     whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
                   >
-                    <span className="font-heading text-white tracking-tight">TypeScript</span>
+                    <span className="text-2xl">⚡</span>
+                    <span className="font-heading text-white tracking-tight text-sm">До 1 Гбит/с</span>
                   </motion.div>
                 </div>
               </div>

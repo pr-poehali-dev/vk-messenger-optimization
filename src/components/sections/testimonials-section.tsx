@@ -8,25 +8,25 @@ import { AnimatedBackground } from "@/components/ui/animated-background"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Алексей Иванов",
-      role: "Frontend-разработчик",
+      name: "Артём Соколов",
+      role: "Фрилансер, работает из 12 стран",
       content:
-        "Эта библиотека сэкономила мне кучу времени на разработку. Компоненты красиво оформлены и легко настраиваются.",
-      avatar: "АИ",
+        "Наконец-то нашёл VPN, который не тормозит видеозвонки. Работаю из разных стран — всё летает. Подключение стабильное, ни разу не упало в важный момент.",
+      avatar: "АС",
     },
     {
-      name: "Мария Петрова",
-      role: "UI/UX-дизайнер",
+      name: "Екатерина Новикова",
+      role: "Менеджер по закупкам",
       content:
-        "Как дизайнер, я ценю внимание к деталям в этих компонентах. Они не только функциональны, но и эстетичны.",
-      avatar: "МП",
+        "Использую для работы с зарубежными поставщиками. Доступ к заблокированным сервисам — больше не проблема. Очень простое приложение, разобралась за 2 минуты.",
+      avatar: "ЕН",
     },
     {
-      name: "Дмитрий Козлов",
-      role: "Продакт-менеджер",
+      name: "Игорь Белов",
+      role: "IT-специалист",
       content:
-        "Продуктивность нашей команды значительно выросла с этой библиотекой. Документация отличная, компоненты надежные.",
-      avatar: "ДК",
+        "Проверял много VPN — этот лучший по соотношению скорость/цена. Kill Switch работает как надо, шифрование AES-256. Рекомендую всем коллегам.",
+      avatar: "ИБ",
     },
   ]
 
@@ -39,13 +39,13 @@ export function TestimonialsSection() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <AnimatedText
-                text="Отзывы пользователей"
+                text="Нам доверяют тысячи пользователей"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl"
                 animation="slide"
               />
               <AnimatedText
-                text="Узнайте, что говорят разработчики и дизайнеры, использующие нашу библиотеку."
+                text="Реальные отзывы людей, которые ценят свою приватность в сети."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
